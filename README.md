@@ -1,1 +1,1 @@
-# Harvest-Bridge-Development-Initiative-HBDI-
+# Harvest Bridge Development Initiative - Farmer Empowerment
