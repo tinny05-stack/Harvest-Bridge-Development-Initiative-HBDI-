@@ -33,34 +33,19 @@ const values = [
 
 const milestones = [
   {
-    year: "2009",
+    year: "2026",
     title: "Foundation",
-    description: "HBDI was established to address persistent community challenges.",
+    description: "HBDI was established and began laying the groundwork for future programs and partnerships.",
   },
   {
-    year: "2012",
-    title: "First Agricultural Program",
-    description: "Launched our flagship sustainable farming initiative reaching 500 farmers.",
+    year: "2026",
+    title: "Listening & Planning",
+    description: "Our early focus is on understanding community priorities and shaping practical program plans.",
   },
   {
-    year: "2015",
-    title: "Women Empowerment Launch",
-    description: "Started dedicated programs for women entrepreneurs and leaders.",
-  },
-  {
-    year: "2018",
-    title: "Youth Skills Initiative",
-    description: "Expanded to include vocational training for unemployed youth.",
-  },
-  {
-    year: "2021",
-    title: "Climate Action Focus",
-    description: "Integrated climate-smart practices across all our programs.",
-  },
-  {
-    year: "2024",
-    title: "10,000 Lives Impacted",
-    description: "Reached milestone of empowering over 10,000 community members.",
+    year: "2026",
+    title: "Operational Setup",
+    description: "We are building the systems, relationships, and structures needed to start responsibly.",
   },
 ]
 
@@ -78,11 +63,11 @@ export default function AboutPage() {
                 About Us
               </span>
               <h1 className="mt-4 font-serif text-4xl font-bold leading-tight text-foreground sm:text-5xl lg:text-6xl">
-                <span className="text-balance">Our Story of Impact</span>
+                <span className="text-balance">Our Beginning</span>
               </h1>
               <p className="mt-6 text-lg leading-relaxed text-muted-foreground sm:text-xl">
-                For over 15 years, Harvest Bridge Development Initiative has been at the 
-                forefront of community empowerment and sustainable development.
+                Harvest Bridge Development Initiative is a new organization building the foundation
+                for future community-based programs.
               </p>
             </FadeIn>
           </div>
@@ -110,11 +95,11 @@ export default function AboutPage() {
                   Our History
                 </span>
                 <h2 className="mt-4 font-serif text-3xl font-bold leading-tight text-foreground sm:text-4xl">
-                  <span className="text-balance">Building Bridges Since 2009</span>
+                  <span className="text-balance">Building the Foundation Since 2026</span>
                 </h2>
                 <div className="mt-6 space-y-4 text-muted-foreground">
                   <p className="leading-relaxed">
-                    Harvest Bridge Development Initiative (HBDI) was established in response to 
+                    Harvest Bridge Development Initiative (HBDI) was established in 2026 in response to 
                     persistent challenges faced by communities, particularly smallholder farmers 
                     and vulnerable groups.
                   </p>
@@ -124,8 +109,8 @@ export default function AboutPage() {
                     youth unemployment, and gender inequality.
                   </p>
                   <p className="leading-relaxed">
-                    The organization was created to bridge gaps in resources, knowledge, opportunities, 
-                    and markets while empowering communities to achieve sustainable and self-reliant development.
+                    The organization was created to help bridge gaps in resources, knowledge, opportunities, 
+                    and markets through thoughtful planning, partnership building, and future program development.
                   </p>
                 </div>
               </FadeIn>

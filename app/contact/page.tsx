@@ -1,7 +1,7 @@
 "use client"
 
 import Link from "next/link"
-import { MapPin, Phone, Mail, Clock, Facebook, Twitter, Instagram, Linkedin } from "lucide-react"
+import { MapPin, Phone, Clock, Facebook, Twitter, Instagram, Linkedin } from "lucide-react"
 import { Button } from "@/components/ui/button"
 import { Navigation } from "@/components/navigation"
 import { Footer } from "@/components/footer"
@@ -12,25 +12,15 @@ const contactInfo = [
     icon: MapPin,
     title: "Visit Us",
     details: [
-      "123 Development Avenue",
-      "Community District, CD 12345",
-      "Country",
+      "Songea, Tanzania",
+      "P.O. Box 14",
     ],
   },
   {
     icon: Phone,
     title: "Call Us",
     details: [
-      "+1 (234) 567-8900",
-      "+1 (234) 567-8901",
-    ],
-  },
-  {
-    icon: Mail,
-    title: "Email Us",
-    details: [
-      "info@hbdi.org",
-      "programs@hbdi.org",
+      "+255 136 531 83",
     ],
   },
   {
@@ -51,36 +41,27 @@ const socialLinks = [
   { href: "https://linkedin.com", icon: Linkedin, label: "LinkedIn" },
 ]
 
-const departments = [
+const contactMethods = [
   {
-    name: "General Inquiries",
-    email: "info@hbdi.org",
-    description: "For general questions about our organization and work.",
+    name: "Phone",
+    value: "+255 136 531 83",
+    href: "tel:+25513653183",
+    description: "Use our main phone number for all current inquiries.",
   },
   {
-    name: "Programs & Projects",
-    email: "programs@hbdi.org",
-    description: "Information about our programs and how to participate.",
+    name: "Location",
+    value: "Songea, Tanzania",
+    description: "Our organization is based in Songea, Tanzania.",
   },
   {
-    name: "Partnerships",
-    email: "partnerships@hbdi.org",
-    description: "For organizations interested in collaborating with us.",
+    name: "Postal Address",
+    value: "P.O. Box 14",
+    description: "Use this postal address for official correspondence.",
   },
   {
-    name: "Volunteer Opportunities",
-    email: "volunteer@hbdi.org",
-    description: "Learn how you can contribute your time and skills.",
-  },
-  {
-    name: "Media & Press",
-    email: "media@hbdi.org",
-    description: "For media inquiries and press-related requests.",
-  },
-  {
-    name: "Donations",
-    email: "donate@hbdi.org",
-    description: "Questions about donations and financial support.",
+    name: "Office Hours",
+    value: "Monday - Friday: 8:00 AM - 5:00 PM",
+    description: "We are generally available during weekday office hours.",
   },
 ]
 
@@ -135,38 +116,44 @@ export default function ContactPage() {
           </div>
         </SectionWrapper>
 
-        {/* Department Contacts */}
+        {/* Contact Methods */}
         <SectionWrapper className="bg-secondary py-20 sm:py-28">
           <div className="mx-auto max-w-7xl px-4 sm:px-6 lg:px-8">
             <FadeIn className="mx-auto max-w-2xl text-center">
               <span className="text-sm font-semibold uppercase tracking-wider text-primary">
-                Departments
+                Contact Details
               </span>
               <h2 className="mt-4 font-serif text-3xl font-bold text-foreground sm:text-4xl">
-                Reach the Right Team
+                Ways to Reach Us
               </h2>
               <p className="mt-4 text-muted-foreground">
-                Contact the specific department that can best assist you with your inquiry.
+                Use the same official contact details below wherever you connect with HBDI.
               </p>
             </FadeIn>
 
             <StaggerContainer className="mt-16 grid gap-6 sm:grid-cols-2 lg:grid-cols-3" staggerDelay={0.1}>
-              {departments.map((dept) => (
-                <StaggerItem key={dept.name}>
+              {contactMethods.map((method) => (
+                <StaggerItem key={method.name}>
                   <div className="h-full rounded-2xl bg-card p-6 shadow-sm transition-shadow hover:shadow-md">
                     <h3 className="font-serif text-lg font-semibold text-foreground">
-                      {dept.name}
+                      {method.name}
                     </h3>
                     <p className="mt-2 text-sm text-muted-foreground">
-                      {dept.description}
+                      {method.description}
                     </p>
-                    <a
-                      href={`mailto:${dept.email}`}
-                      className="mt-4 inline-flex items-center gap-2 text-sm font-medium text-primary hover:underline"
-                    >
-                      <Mail className="h-4 w-4" />
-                      {dept.email}
-                    </a>
+                    {method.href ? (
+                      <a
+                        href={method.href}
+                        className="mt-4 inline-flex items-center gap-2 text-sm font-medium text-primary hover:underline"
+                      >
+                        <Phone className="h-4 w-4" />
+                        {method.value}
+                      </a>
+                    ) : (
+                      <p className="mt-4 text-sm font-medium text-primary">
+                        {method.value}
+                      </p>
+                    )}
                   </div>
                 </StaggerItem>
               ))}
@@ -185,7 +172,7 @@ export default function ContactPage() {
                 Connect on Social Media
               </h2>
               <p className="mx-auto mt-4 max-w-2xl text-muted-foreground">
-                Stay updated with our latest news, events, and stories of impact by following us on social media.
+                Stay updated with our latest announcements and organizational updates by following us on social media.
               </p>
               
               <div className="mt-10 flex flex-wrap items-center justify-center gap-4">
@@ -227,7 +214,7 @@ export default function ContactPage() {
                     <div>
                       <p className="font-medium text-foreground">Address</p>
                       <p className="text-muted-foreground">
-                        123 Development Avenue, Community District, CD 12345
+                        Songea, Tanzania, P.O. Box 14
                       </p>
                     </div>
                   </div>
@@ -254,10 +241,10 @@ export default function ContactPage() {
                     <div className="text-center">
                       <MapPin className="mx-auto h-12 w-12 text-primary/40" />
                       <p className="mt-4 font-medium text-muted-foreground">
-                        Interactive Map
+                        Office Location
                       </p>
                       <p className="text-sm text-muted-foreground/70">
-                        123 Development Avenue
+                        Songea, Tanzania
                       </p>
                     </div>
                   </div>

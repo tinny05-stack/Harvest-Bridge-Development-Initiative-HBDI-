@@ -1,5 +1,5 @@
 import Link from "next/link"
-import { Facebook, Twitter, Instagram, Linkedin, Mail, Phone, MapPin } from "lucide-react"
+import { Facebook, Twitter, Instagram, Linkedin, Phone, MapPin } from "lucide-react"
 
 const footerLinks = {
   navigation: [
@@ -47,7 +47,7 @@ export function Footer() {
               </div>
             </Link>
             <p className="mt-6 text-sm leading-relaxed text-background/70">
-              Empowering communities through sustainable development, education, and innovative agricultural practices.
+              Building a strong foundation for farmer support and agricultural development in Tanzania.
             </p>
             <div className="mt-6 flex gap-4">
               {socialLinks.map((social) => (
@@ -103,20 +103,14 @@ export function Footer() {
               <li className="flex items-start gap-3">
                 <MapPin className="mt-0.5 h-5 w-5 shrink-0 text-primary" />
                 <span className="text-sm text-background/70">
-                  123 Development Avenue,<br />
-                  Community District, CD 12345
+                  Songea, Tanzania<br />
+                  P.O. Box 14
                 </span>
               </li>
               <li className="flex items-center gap-3">
                 <Phone className="h-5 w-5 shrink-0 text-primary" />
                 <span className="text-sm text-background/70">
-                  +1 (234) 567-8900
-                </span>
-              </li>
-              <li className="flex items-center gap-3">
-                <Mail className="h-5 w-5 shrink-0 text-primary" />
-                <span className="text-sm text-background/70">
-                  info@hbdi.org
+                  +255 136 531 83
                 </span>
               </li>
             </ul>

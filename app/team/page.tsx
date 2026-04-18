@@ -2,7 +2,7 @@
 
 import Image from "next/image"
 import Link from "next/link"
-import { ArrowRight, Linkedin, Twitter, Mail } from "lucide-react"
+import { ArrowRight, Linkedin, Twitter } from "lucide-react"
 import { Button } from "@/components/ui/button"
 import { Navigation } from "@/components/navigation"
 import { Footer } from "@/components/footer"
@@ -13,22 +13,20 @@ const leadership = [
     name: "David Okonkwo",
     role: "Executive Director",
     image: "/images/team/member-1.jpg",
-    bio: "With over 20 years of experience in community development, David has led HBDI since its founding, driving our mission to empower communities across the region.",
+    bio: "David provides strategic direction for HBDI as the organization builds its foundation and prepares for future community-based work.",
     social: {
       linkedin: "#",
       twitter: "#",
-      email: "david@hbdi.org",
     },
   },
   {
     name: "Grace Mensah",
     role: "Program Director",
     image: "/images/team/member-2.jpg",
-    bio: "Grace oversees all HBDI programs, ensuring they align with our mission and deliver measurable impact to the communities we serve.",
+    bio: "Grace helps shape HBDI's program direction, planning systems and partnerships for the work ahead.",
     social: {
       linkedin: "#",
       twitter: "#",
-      email: "grace@hbdi.org",
     },
   },
 ]
@@ -38,13 +36,13 @@ const teamMembers = [
     name: "Samuel Adeyemi",
     role: "Agricultural Programs Manager",
     image: "/images/team/member-3.jpg",
-    bio: "Samuel leads our agricultural initiatives, training thousands of farmers in sustainable practices.",
+    bio: "Samuel contributes to the design of HBDI's future agricultural programming and farmer support approach.",
   },
   {
     name: "Amara Diallo",
     role: "Youth & Women Programs Coordinator",
     image: "/images/team/member-4.jpg",
-    bio: "Amara champions our empowerment programs for youth and women across communities.",
+    bio: "Amara helps develop inclusive ideas for future youth and women-focused programming.",
   },
   {
     name: "Emmanuel Nwachukwu",
@@ -56,7 +54,7 @@ const teamMembers = [
     name: "Fatima Abebe",
     role: "Community Outreach Manager",
     image: "/images/team/member-6.jpg",
-    bio: "Fatima builds relationships with communities and partners to expand our reach.",
+    bio: "Fatima supports relationship-building with communities and prospective partners as the organization grows.",
   },
 ]
 
@@ -77,8 +75,7 @@ export default function TeamPage() {
                 <span className="text-balance">The People Behind Our Mission</span>
               </h1>
               <p className="mt-6 text-lg leading-relaxed text-muted-foreground sm:text-xl">
-                Meet the dedicated individuals who work tirelessly to empower communities 
-                and create lasting positive change.
+                Meet the people helping shape HBDI as it prepares for its first phase of work.
               </p>
             </FadeIn>
           </div>
@@ -130,13 +127,6 @@ export default function TeamPage() {
                           aria-label={`${leader.name} Twitter`}
                         >
                           <Twitter className="h-5 w-5" />
-                        </a>
-                        <a
-                          href={`mailto:${leader.social.email}`}
-                          className="flex h-10 w-10 items-center justify-center rounded-full bg-muted text-muted-foreground transition-colors hover:bg-primary hover:text-primary-foreground"
-                          aria-label={`Email ${leader.name}`}
-                        >
-                          <Mail className="h-5 w-5" />
                         </a>
                       </div>
                     </div>

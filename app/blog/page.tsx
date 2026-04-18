@@ -9,9 +9,9 @@ import { Footer } from "@/components/footer"
 import { SectionWrapper, FadeIn, StaggerContainer, StaggerItem } from "@/components/section-wrapper"
 
 const featuredPost = {
-  slug: "sustainable-farming-transforms-communities",
-  title: "How Sustainable Farming is Transforming Rural Communities",
-  excerpt: "Discover how our climate-smart agricultural practices are helping thousands of farmers increase yields while protecting the environment for future generations.",
+  slug: "launching-hbdi-our-first-steps",
+  title: "Launching HBDI: Our First Steps",
+  excerpt: "A look at how we are building the foundation for future programs through planning, partnerships, and community listening.",
   image: "/images/blog/sustainable-farming.jpg",
   author: "David Okonkwo",
   date: "March 15, 2024",
@@ -21,9 +21,9 @@ const featuredPost = {
 
 const blogPosts = [
   {
-    slug: "women-entrepreneurs-success-stories",
-    title: "5 Inspiring Stories of Women Entrepreneurs in Our Programs",
-    excerpt: "Meet the remarkable women who have transformed their lives and communities through our economic empowerment initiatives.",
+    slug: "shaping-womens-economic-programs",
+    title: "Shaping Future Economic Programs for Women",
+    excerpt: "Early ideas and priorities guiding the economic empowerment work we hope to launch.",
     image: "/images/blog/women-entrepreneurs.jpg",
     author: "Grace Mensah",
     date: "March 10, 2024",
@@ -32,8 +32,8 @@ const blogPosts = [
   },
   {
     slug: "youth-digital-literacy-program",
-    title: "Bridging the Digital Divide: Our Youth Digital Literacy Program",
-    excerpt: "How we are preparing young people for the digital economy through comprehensive training and mentorship.",
+    title: "Planning Youth Digital Literacy Support",
+    excerpt: "How we are thinking about relevant digital skills for young people in the communities we hope to serve.",
     image: "/images/blog/youth-digital.jpg",
     author: "Amara Diallo",
     date: "March 5, 2024",
@@ -42,8 +42,8 @@ const blogPosts = [
   },
   {
     slug: "climate-smart-agriculture-guide",
-    title: "A Guide to Climate-Smart Agriculture Practices",
-    excerpt: "Learn about the techniques and methods we teach farmers to adapt to changing climate conditions.",
+    title: "Why Climate-Smart Agriculture Matters",
+    excerpt: "An introduction to the practices influencing our future agriculture programming.",
     image: "/images/hero-agriculture.jpg",
     author: "Samuel Adeyemi",
     date: "February 28, 2024",
@@ -52,8 +52,8 @@ const blogPosts = [
   },
   {
     slug: "community-health-initiatives",
-    title: "Improving Health Outcomes Through Community Initiatives",
-    excerpt: "An overview of our health awareness programs and their impact on community wellbeing.",
+    title: "Considering Community Health Priorities",
+    excerpt: "A look at the health and sanitation themes informing our early planning.",
     image: "/images/community-gathering.jpg",
     author: "Fatima Abebe",
     date: "February 20, 2024",
@@ -62,8 +62,8 @@ const blogPosts = [
   },
   {
     slug: "partnership-announcement-2024",
-    title: "New Partnership to Expand Agricultural Training Programs",
-    excerpt: "We are excited to announce a new partnership that will help us reach more farmers across the region.",
+    title: "Building the Partnerships We Need",
+    excerpt: "Why strong local relationships are essential as we prepare for future program work.",
     image: "/images/women-empowerment.jpg",
     author: "David Okonkwo",
     date: "February 15, 2024",
@@ -71,9 +71,9 @@ const blogPosts = [
     category: "News",
   },
   {
-    slug: "youth-employment-success",
-    title: "From Training to Employment: Youth Success Stories",
-    excerpt: "How our vocational training programs are helping young people secure meaningful employment.",
+    slug: "future-youth-skills-pathways",
+    title: "Future Pathways for Youth Skills Development",
+    excerpt: "The kinds of practical training pathways we want to explore as the organization grows.",
     image: "/images/youth-training.jpg",
     author: "Amara Diallo",
     date: "February 10, 2024",
@@ -98,11 +98,10 @@ export default function BlogPage() {
                 Our Blog
               </span>
               <h1 className="mt-4 font-serif text-4xl font-bold leading-tight text-foreground sm:text-5xl lg:text-6xl">
-                <span className="text-balance">Stories of Impact & Change</span>
+                <span className="text-balance">Updates, Ideas & Early Planning</span>
               </h1>
               <p className="mt-6 text-lg leading-relaxed text-muted-foreground sm:text-xl">
-                Insights, updates, and inspiring stories from our work empowering communities 
-                and creating sustainable change.
+                Insights, updates, and planning notes from a new organization preparing its first programs.
               </p>
             </FadeIn>
           </div>

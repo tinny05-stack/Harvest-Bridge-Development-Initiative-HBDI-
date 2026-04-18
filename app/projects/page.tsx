@@ -21,7 +21,7 @@ const projects = [
       "Agribusiness development and value addition",
       "Linking farmers to reliable markets",
     ],
-    impact: "5,000+ farmers trained",
+    status: "Program in planning",
   },
   {
     id: "economic",
@@ -35,7 +35,7 @@ const projects = [
       "Household and community economic empowerment",
       "Access to microfinance and credit facilities",
     ],
-    impact: "2,000+ businesses supported",
+    status: "Program in planning",
   },
   {
     id: "education",
@@ -49,7 +49,7 @@ const projects = [
       "Digital literacy and education access",
       "Community mentorship and training",
     ],
-    impact: "3,000+ people trained",
+    status: "Program in planning",
   },
   {
     id: "youth",
@@ -63,7 +63,7 @@ const projects = [
       "Promotion of gender equality and inclusion",
       "Leadership and mentorship programs",
     ],
-    impact: "1,500+ women empowered",
+    status: "Program in planning",
   },
   {
     id: "health",
@@ -77,7 +77,7 @@ const projects = [
       "Social welfare support services",
       "Community health education",
     ],
-    impact: "20+ communities reached",
+    status: "Program in planning",
   },
   {
     id: "environment",
@@ -91,7 +91,7 @@ const projects = [
       "Responsible natural resource management",
       "Tree planting and reforestation",
     ],
-    impact: "10,000+ trees planted",
+    status: "Program in planning",
   },
 ]
 
@@ -109,11 +109,11 @@ export default function ProjectsPage() {
                 Our Projects
               </span>
               <h1 className="mt-4 font-serif text-4xl font-bold leading-tight text-foreground sm:text-5xl lg:text-6xl">
-                <span className="text-balance">Programs That Transform Lives</span>
+                <span className="text-balance">Programs We Are Preparing</span>
               </h1>
               <p className="mt-6 text-lg leading-relaxed text-muted-foreground sm:text-xl">
-                Discover our comprehensive programs designed to create sustainable impact 
-                across agriculture, education, economic empowerment, and environmental conservation.
+                Explore the focus areas shaping our future work across agriculture, education,
+                economic empowerment, health, and environmental conservation.
               </p>
             </FadeIn>
           </div>
@@ -152,7 +152,7 @@ export default function ProjectsPage() {
                       <div className={index % 2 === 1 ? "lg:order-first" : ""}>
                         <div className="inline-flex items-center gap-2 rounded-full bg-primary/10 px-4 py-2">
                           <span className="text-sm font-semibold text-primary">
-                            {project.impact}
+                            {project.status}
                           </span>
                         </div>
                         <h2 className="mt-6 font-serif text-2xl font-bold leading-tight text-foreground sm:text-3xl lg:text-4xl">
