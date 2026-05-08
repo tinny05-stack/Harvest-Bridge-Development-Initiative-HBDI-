@@ -140,65 +140,109 @@ function animateCounter(element) {
    CONTACT FORM
    ============================================ */
 function initContactForm() {
-  const form = document.querySelector('.contact-form form');
-  
-  if (form) {
-    form.addEventListener('submit', function(e) {
-      e.preventDefault();
-      
-      // Get form data
-      const formData = new FormData(form);
-      const data = Object.fromEntries(formData.entries());
-      
-      // Simple validation
-      let isValid = true;
-      const requiredFields = form.querySelectorAll('[required]');
-      
-      requiredFields.forEach(field => {
-        if (!field.value.trim()) {
-          isValid = false;
-          field.style.borderColor = '#ef4444';
-        } else {
-          field.style.borderColor = '';
-        }
-      });
-      
-      // Email validation
-      const emailField = form.querySelector('input[type="email"]');
-      if (emailField && emailField.value) {
-        const emailRegex = /^[^\s@]+@[^\s@]+\.[^\s@]+$/;
-        if (!emailRegex.test(emailField.value)) {
-          isValid = false;
-          emailField.style.borderColor = '#ef4444';
-        }
-      }
-      
-      if (isValid) {
-        // Show success message
-        const submitBtn = form.querySelector('.form-submit');
-        const originalText = submitBtn.textContent;
-        submitBtn.textContent = 'Message Sent!';
-        submitBtn.style.backgroundColor = '#2d5a27';
-        submitBtn.disabled = true;
-        
-        // Reset form
-        setTimeout(() => {
-          form.reset();
-          submitBtn.textContent = originalText;
-          submitBtn.style.backgroundColor = '';
-          submitBtn.disabled = false;
-        }, 3000);
-      }
-    });
-    
-    // Remove error styling on input
-    const inputs = form.querySelectorAll('input, textarea, select');
-    inputs.forEach(input => {
-      input.addEventListener('input', function() {
-        this.style.borderColor = '';
-      });
+  const form = document.getElementById('hbdi-contact-form');
+  if (!form) {
+    return;
+  }
+
+  const statusMessage = document.getElementById('hbdi-contact-status');
+  const submitBtn = form.querySelector('.form-submit');
+  const originalSubmitText = submitBtn ? submitBtn.textContent : '';
+  const emailJsPublicKey = 'LDbXUqkHdcveswBBw';
+  const emailJsServiceId = 'service_7ynshau';
+  const emailJsTemplateId = 'template_2n7upfh';
+
+  if (window.emailjs) {
+    emailjs.init({
+      publicKey: emailJsPublicKey
     });
   }
+
+  form.addEventListener('submit', function(e) {
+    e.preventDefault();
+
+    let isValid = true;
+    const requiredFields = form.querySelectorAll('[required]');
+
+    requiredFields.forEach(field => {
+      if (!field.value.trim()) {
+        isValid = false;
+        field.style.borderColor = '#ef4444';
+      } else {
+        field.style.borderColor = '';
+      }
+    });
+
+    const emailField = form.querySelector('input[type="email"]');
+    if (emailField && emailField.value) {
+      const emailRegex = /^[^\s@]+@[^\s@]+\.[^\s@]+$/;
+      if (!emailRegex.test(emailField.value)) {
+        isValid = false;
+        emailField.style.borderColor = '#ef4444';
+      }
+    }
+
+    if (!isValid) {
+      if (statusMessage) {
+        statusMessage.textContent = 'Please complete all required fields correctly.';
+        statusMessage.style.color = '#ef4444';
+      }
+      return;
+    }
+
+    if (!window.emailjs) {
+      if (statusMessage) {
+        statusMessage.textContent = 'Message could not be sent. Please try again later.';
+        statusMessage.style.color = '#ef4444';
+      }
+      return;
+    }
+
+    const firstName = form.querySelector('#firstName').value.trim();
+    const lastName = form.querySelector('#lastName').value.trim();
+    form.querySelector('#name').value = `${firstName} ${lastName}`.trim();
+
+    if (statusMessage) {
+      statusMessage.textContent = '';
+    }
+
+    if (submitBtn) {
+      submitBtn.textContent = 'Sending...';
+      submitBtn.disabled = true;
+    }
+
+    emailjs.sendForm(emailJsServiceId, emailJsTemplateId, form)
+      .then(function() {
+        if (statusMessage) {
+          statusMessage.textContent = 'Message sent successfully (H.B.D.I)';
+          statusMessage.style.color = '#2d5a27';
+        }
+
+        form.reset();
+      })
+      .catch(function() {
+        if (statusMessage) {
+          statusMessage.textContent = 'Message could not be sent. Please try again later.';
+          statusMessage.style.color = '#ef4444';
+        }
+      })
+      .finally(function() {
+        if (submitBtn) {
+          submitBtn.textContent = originalSubmitText;
+          submitBtn.disabled = false;
+        }
+      });
+  });
+
+  const inputs = form.querySelectorAll('input, textarea, select');
+  inputs.forEach(input => {
+    input.addEventListener('input', function() {
+      this.style.borderColor = '';
+      if (statusMessage) {
+        statusMessage.textContent = '';
+      }
+    });
+  });
 }
 
 /* ============================================
