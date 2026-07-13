@@ -23,7 +23,11 @@ const footerLinks = {
 const socialLinks = [
   { href: "https://facebook.com", icon: Facebook, label: "Facebook" },
   { href: "https://twitter.com", icon: Twitter, label: "Twitter" },
-  { href: "https://instagram.com", icon: Instagram, label: "Instagram" },
+  {
+    href: "https://www.instagram.com/h.b.d.initiative?igsh=MWJ6cm0yb3N6Ynlpaw%3D%3D&utm_source=qr",
+    icon: Instagram,
+    label: "Instagram",
+  },
   { href: "https://linkedin.com", icon: Linkedin, label: "LinkedIn" },
 ]
 
@@ -35,7 +39,11 @@ export function Footer() {
           <div className="lg:col-span-1">
             <Link href="/" className="flex items-center gap-3">
               <div className="flex h-12 w-12 items-center justify-center rounded-full bg-primary">
-                <span className="font-serif text-xl font-bold text-primary-foreground">H</span>
+                <img
+                  src="/hbdi-logo.png"
+                  alt="HBDI logo"
+                  className="h-full w-full rounded-full object-contain"
+                />
               </div>
               <div>
                 <span className="block font-serif text-lg font-semibold">

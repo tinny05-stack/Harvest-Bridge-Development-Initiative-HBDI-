@@ -44,7 +44,7 @@ export function Navigation() {
             <Link href="/" className="flex items-center gap-3">
               <div className="flex h-10 w-10 items-center justify-center rounded-full bg-primary">
                 <img
-                  src="/hbdi logo.png"
+                  src="/hbdi-logo.png"
                   alt="HBDI logo"
                   className="h-full w-full rounded-full object-contain"
                 />
@@ -96,7 +96,7 @@ export function Navigation() {
               <Link href="/" className="flex items-center gap-3" onClick={() => setIsMobileMenuOpen(false)}>
                 <div className="flex h-10 w-10 items-center justify-center rounded-full bg-primary">
                   <img
-                    src="/hbdi logo.png"
+                    src="/hbdi-logo.png"
                     alt="HBDI logo"
                     className="h-full w-full rounded-full object-contain"
                   />
