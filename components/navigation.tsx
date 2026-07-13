@@ -43,7 +43,11 @@ export function Navigation() {
           <div className="flex h-20 items-center justify-between">
             <Link href="/" className="flex items-center gap-3">
               <div className="flex h-10 w-10 items-center justify-center rounded-full bg-primary">
-                <span className="font-serif text-lg font-bold text-primary-foreground">H</span>
+                <img
+                  src="/hbdi logo.png"
+                  alt="HBDI logo"
+                  className="h-full w-full rounded-full object-contain"
+                />
               </div>
               <span className="hidden font-serif text-xl font-semibold text-foreground sm:block">
                 HBDI
@@ -91,7 +95,11 @@ export function Navigation() {
             <div className="flex h-20 items-center justify-between px-4">
               <Link href="/" className="flex items-center gap-3" onClick={() => setIsMobileMenuOpen(false)}>
                 <div className="flex h-10 w-10 items-center justify-center rounded-full bg-primary">
-                  <span className="font-serif text-lg font-bold text-primary-foreground">H</span>
+                  <img
+                    src="/hbdi logo.png"
+                    alt="HBDI logo"
+                    className="h-full w-full rounded-full object-contain"
+                  />
                 </div>
                 <span className="font-serif text-xl font-semibold text-foreground">
                   HBDI

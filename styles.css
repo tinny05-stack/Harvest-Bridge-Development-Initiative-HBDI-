@@ -172,12 +172,14 @@ p {
   display: flex;
   align-items: center;
   justify-content: center;
+  overflow: hidden;
 }
 
-.nav-logo-icon svg {
-  width: 28px;
-  height: 28px;
-  color: white;
+.nav-logo-icon img {
+  width: 100%;
+  height: 100%;
+  object-fit: contain;
+  display: block;
 }
 
 .nav-logo-text {
@@ -734,12 +736,14 @@ p {
   display: flex;
   align-items: center;
   justify-content: center;
+  overflow: hidden;
 }
 
-.footer-logo-icon svg {
-  width: 28px;
-  height: 28px;
-  color: white;
+.footer-logo-icon img {
+  width: 100%;
+  height: 100%;
+  object-fit: contain;
+  display: block;
 }
 
 .footer-logo-text {
